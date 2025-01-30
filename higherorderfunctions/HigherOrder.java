@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class HigherOrder{
 
@@ -103,7 +104,7 @@ public class HigherOrder{
 
         // *******************toList*******************
         System.out.println("*******************toList*******************");
-        List<String> upperUsernames = usernames.stream().map(username -> username.toUpperCase()).toList();
+        List<String> upperUsernames = usernames.stream().map(username -> username.toUpperCase()).collect(Collectors.toList());
         System.out.println(upperUsernames);
 
         // *******************reduce*******************
