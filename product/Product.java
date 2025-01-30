@@ -8,12 +8,14 @@ public abstract class Product {
     private double price;
     private String color;
     private String brand;
+    private String material;
 
 
-    public Product(double price, String color, String brand) {
+    public Product(double price, String color, String brand, String material) {
         this.price = price;
         this.color = color;
         this.brand = brand;
+        this.material = material;
     }
 
 
@@ -39,6 +41,14 @@ public abstract class Product {
 
     public void setBrand(String brand) {
         this.brand = brand;
+    }
+
+    public String getMaterial(){
+        return this.material;
+    }
+
+    public void setMaterial(String material){
+        this.material = material;
     }
 
     public void fold(){

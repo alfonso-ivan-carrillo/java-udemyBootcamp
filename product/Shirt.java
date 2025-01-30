@@ -7,8 +7,8 @@ public class Shirt extends Product{
 
 
 
-    public Shirt(double price, String color, String brand, Size size) {
-        super(price, color, brand);
+    public Shirt(double price, String color, String brand, Size size, String material) {
+        super(price, color, brand, material);
         this.size = size;
     }
 
