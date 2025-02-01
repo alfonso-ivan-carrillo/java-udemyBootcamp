@@ -2,9 +2,10 @@ package product;
 
 public class Perfume extends Product {
     private String name;
-    private String gender;
+    private Gender gender;
+    public enum Gender {UNISEX, MALE, FEMALE}
 
-    public Perfume(double price, String brand, String color, String material) {
+    public Perfume(double price, String brand, String color, String material, String name, Gender gender) {
         super(price, brand, color, material);
         this.name = name;
         this.gender = gender;
@@ -18,11 +19,11 @@ public class Perfume extends Product {
         this.name = name;
     }
 
-    public String getGender() {
+    public Gender getGender() {
         return this.gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(Gender gender) {
         this.gender = gender;
     }
 
@@ -30,6 +31,11 @@ public class Perfume extends Product {
     public void wear() {
         System.out.println(
                 "Wearing the perfume " + this.getClass().getSimpleName() + ", its a scent for " + this.gender + ".");
+    }
+
+    @Override
+    public void fold(){
+        System.out.println("You don't fold perfumes.");
     }
 
 }

@@ -1,4 +1,5 @@
 import product.*;
+import product.Perfume.Gender;
 import product.Shirt.Size;
 
 public class Main {
@@ -16,20 +17,20 @@ public class Main {
 
         Pants leatherPants = new Pants(20.00, "black", "Tom Ford", 40, 29, "leather");
 
-        Perfume ethanPerfume = new Perfume(115.00, "Cape Heartache", "green", "heartache");
+        Perfume ethanPerfume = new Perfume(115.00, "Imaginary Authors", "green", "pine oil", "Cape Heartache", Gender.MALE);
 
         productStore(tShirt);
-        productStore(pants);
-        productStore(leatherPants);
-        productStore(ethanPerfume);
+        // productStore(pants);
+        // productStore(leatherPants);
+        // productStore(ethanPerfume);
 
-        // tShirt.fold();
-        // pants.fold();
-
+        tShirt.fold();
+        pants.fold();
+        ethanPerfume.fold();
         // tShirt.wear();
         // pants.wear();
 
-        System.out.println(tShirt.toString());
+        // System.out.println(tShirt.toString());
 
     }
 }

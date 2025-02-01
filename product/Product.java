@@ -10,14 +10,12 @@ public abstract class Product {
     private String brand;
     private String material;
 
-
     public Product(double price, String color, String brand, String material) {
         this.price = price;
         this.color = color;
         this.brand = brand;
         this.material = material;
     }
-
 
     public double getPrice() {
         return this.price;
@@ -43,20 +41,24 @@ public abstract class Product {
         this.brand = brand;
     }
 
-    public String getMaterial(){
+    public String getMaterial() {
         return this.material;
     }
 
-    public void setMaterial(String material){
+    public void setMaterial(String material) {
         this.material = material;
     }
 
-    public void fold(){
-        System.out.println("Folding your " + this.getClass().getSimpleName() + " brand: " + this.getBrand() );
+    public void fold() {
+        System.out.println("Folding your " + this.getClass().getSimpleName() + " and the brand: " + this.getBrand()
+                + ". The color is: " + this.getColor() + " and it's made with this material: " + this.getMaterial()
+                + " the price for this item: " + this.getPrice() + ".");
     }
 
-    // abstract method specifies what should be returned and what parameters to accept
-    // abstract method does not have a body, it depends on the child class to implement 
+    // abstract method specifies what should be returned and what parameters to
+    // accept
+    // abstract method does not have a body, it depends on the child class to
+    // implement
     public abstract void wear();
 
 }

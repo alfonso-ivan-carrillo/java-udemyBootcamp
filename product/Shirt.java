@@ -29,7 +29,8 @@ public class Shirt extends Product{
 
     @Override
     public void wear() {
-        System.out.println("Wearing the " + this.getClass().getSimpleName() + " at a " + this.size + " size suits you well.");
+        System.out.println("You are wearing the " + this.getClass().getSimpleName() + " at a " + this.size + " size suits you well. The color is " + this.getColor() + 
+        "and it's made with this material: " + this.getMaterial() + " the price for this item: " + this.getPrice() + ". the brand: " + this.getBrand() + ".");
     }
 
     @Override
